@@ -7,8 +7,8 @@
 |password|string|null: false|
 
 ### Association
-- has_many :group
-- has_many :message
+- has_many :groups, through: :groups_users
+- has_many :messages
 
 
 ## groupテーブル
@@ -18,9 +18,8 @@
 |group_name|string|null: false|
 
 ### Association
-- belongs_to :groups_users
-- belongs_to :user
-- has_many :message
+- has_many :users, through: :group_users
+- has_many :messages
 
 
 ## groups_usersテーブル
