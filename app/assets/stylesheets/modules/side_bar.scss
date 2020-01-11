@@ -17,6 +17,9 @@
       float: right;
       .list {
         display: inline-block;
+        a{
+          color: white;
+        }
       }
       .icon {
         color: $white;
